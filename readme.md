@@ -2,9 +2,9 @@
 
 ---
 
-## [To-Do List App](http://127.0.0.1:5500/vanila_javascript_to-do-list/Index.html)
+## [To-Do List App](https://vanila-javascript-to-do-list.netlify.app/)
 
-Go to http://127.0.0.1:5500/vanila\_javascript\_to-do-list/Index.html after cloning the repo in your local system. You can use VScode live run extension.
+Click on the link and go to the deployed site [vanila-javascript-to-do-list](https://vanila-javascript-to-do-list.netlify.app/)
 
 
 ### 1. Type the task & Click on Add
