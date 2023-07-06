@@ -7,18 +7,18 @@
 
 .container {
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
   background: linear-gradient(135deg, #153677, #4e085f);
   padding: 10px;
 }
 
 .todo-app {
   width: 100%;
-  max-width: 540px;
-  background: #fff;
-  margin: 100px auto 20px;
+  max-width: 400px;
+  margin: 100px auto;
   padding: 40px 30px 70px;
   border-radius: 10px;
+  background: #fff;
 }
 
 .todo-app h2 {
@@ -53,9 +53,10 @@ input {
 }
 
 button {
+  flex: 0 0 100px;
   border: none;
   outline: none;
-  padding: 16px 50px;
+  padding: 16px;
   background: #0044ff;
   color: #fff;
   font-size: 16px;
@@ -63,12 +64,12 @@ button {
   border-radius: 30px;
 }
 
-#delete-all{
+#delete-all {
   margin-top: 15px;
   background: #ff5945;
 }
 
-ul li{
+ul li {
   list-style: none;
   font-size: 17px;
   padding: 12px 8px 12px 50px;
@@ -76,8 +77,9 @@ ul li{
   cursor: pointer;
   position: relative;
 }
-/* sudo element */
-ul li::before{
+
+/* Pseudo-element */
+ul li::before {
   content: '';
   position: absolute;
   height: 28px;
@@ -90,16 +92,16 @@ ul li::before{
   left: 8px;
 }
 
-ul li.checked{
+ul li.checked {
   color: #555;
   text-decoration: line-through;
 }
 
-ul li.checked::before{
+ul li.checked::before {
   background-image: url(images/checked.png);
 }
 
-ul li span{
+ul li span {
   position: absolute;
   right: 0;
   top: 5px;
@@ -112,6 +114,42 @@ ul li span{
   border-radius: 50%;
 }
 
-ul li span:hover{
+ul li span:hover {
   background: #edeef0;
+}
+
+/* Media queries */
+@media (max-width: 600px) {
+  .todo-app {
+    padding: 20px;
+  }
+
+  .row {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  input {
+    flex: 1.5;
+  }
+
+  button {
+    flex: 0 0 80px;
+    padding: 4px;
+    font-size: 14px;
+  }
+
+  #delete-all {
+    padding: 10px;
+  }
+  ul li {
+    font-size: 16px;
+  }
+
+  ul li span {
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    line-height: 30px;
+  }
 }
